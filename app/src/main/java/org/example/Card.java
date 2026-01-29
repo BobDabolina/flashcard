@@ -1,3 +1,5 @@
+package org.example;
+
 public class Card{
     String question;
     String answer;
@@ -8,7 +10,7 @@ public class Card{
     }
 
     public void setQuestion(String text) {
-        question = "";
+        question = text;
     }
 
     public String getQuestion() {
@@ -16,7 +18,7 @@ public class Card{
     }
 
     public void setAnswer(String text) {
-        answer = "";
+        answer = text;
     }
 
     public String getAnswer() {

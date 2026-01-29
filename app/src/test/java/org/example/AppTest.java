@@ -14,11 +14,22 @@ class AppTest {
 
     @Test 
     void createACard() {
-        Card card = new Card();
+        Card nullCard = new Card();
 
         // Check if a default card has been created
-        assertNotNull(card);
-        assertEquals("", card.getQuestion());
-        assertEquals("", card.getAnswer());
+        assertNotNull(nullCard);
+        assertEquals("", nullCard.getQuestion());
+        assertEquals("", nullCard.getAnswer());
+    }
+
+    @Test
+    void createCardWithContent() {
+        Card filledCard = new Card();
+        filledCard.setQuestion("Whats 9 + 10");
+        filledCard.setAnswer("21");
+
+        assertNotNull(filledCard);
+        assertEquals("Whats 9 + 10", filledCard.getQuestion());
+        assertEquals("21", filledCard.getAnswer());
     }
 }
