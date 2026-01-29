@@ -11,4 +11,14 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    @Test 
+    void createACard() {
+        Card card = new Card();
+
+        // Check if a default card has been created
+        assertNotNull(card);
+        assertEquals("", card.getQuestion());
+        assertEquals("", card.getAnswer());
+    }
 }
